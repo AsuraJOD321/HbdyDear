@@ -229,9 +229,13 @@
         });
     };
 
-    document.addEventListener('DOMContentLoaded', () => {
-        injectMusicToggle();
-        updateToggleIcon();
+document.addEventListener('DOMContentLoaded', () => {
         window.applyName();
+
+        if (window.BDAY_MUSIC_ENABLED) {
+            injectMusicToggle();
+            updateToggleIcon();
+            startMusic();
+        }
     });
 })();
